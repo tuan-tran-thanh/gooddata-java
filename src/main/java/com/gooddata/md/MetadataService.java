@@ -225,4 +225,14 @@ public class MetadataService extends AbstractService {
         return result;
     }
 
+    public Collection<String> usedBy(final Obj obj, final Class<? extends Obj>... type) {
+        notNull(obj, "obj");
+        return usedBy(obj.getUri(), type);
+    }
+
+    public Collection<String> usedBy(final String uri, final Class<? extends Obj>... type) {
+        notNull(uri, "uri");
+        restTemplate.postForObject(InUse.USEDBY_URI, new InUse(uri, type), InUseEntries.class);
+        return null;
+    }
 }
