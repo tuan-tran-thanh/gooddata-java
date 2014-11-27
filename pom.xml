@@ -139,6 +139,8 @@
                             <includes>
                                 <include>**/*AT.java</include>
                             </includes>
+                            <parallel>methods</parallel>
+                            <threadCount>2</threadCount>
                         </configuration>
                     </plugin>
                 </plugins>
