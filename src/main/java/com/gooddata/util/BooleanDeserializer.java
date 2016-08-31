@@ -26,7 +26,7 @@ public class BooleanDeserializer extends JsonDeserializer<Boolean> {
         } else if (root.isTextual()) {
             return "1".equals(root.textValue());
         } else {
-            throw new JsonMappingException("Unknown value of type: " + root.getNodeType(), jp.getCurrentLocation());
+            throw new JsonMappingException(jp, "Unknown value of type: " + root.getNodeType(), jp.getCurrentLocation());
         }
     }
 
