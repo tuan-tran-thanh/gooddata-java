@@ -179,6 +179,11 @@
     <dependencies>
         <dependency>
             <groupId>com.gooddata</groupId>
+            <artifactId>gooddata-rest-common</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.gooddata</groupId>
             <artifactId>gooddata-http-client</artifactId>
             <version>0.9.4</version>
         </dependency>
